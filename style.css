@@ -22,6 +22,60 @@ html, body {
   position: relative;
 }
 
+.side-photo {
+  position: absolute;
+  top: 50%;
+  width: 22rem;
+  height: 28rem;
+  object-fit: cover;
+  border: 0.8rem solid rgba(254, 194, 136, 0.15);
+  border-radius: 2.4rem;
+  box-shadow: 0 1.2rem 4rem rgba(0, 0, 0, 0.35);
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+.side-photo--left {
+  right: calc(100% + 5rem);
+  object-position: center;
+}
+
+.side-photo--right {
+  left: calc(100% + 5rem);
+  object-position: center 35%;
+}
+
+@media (max-width: 900px) {
+  .side-photo {
+    width: 13rem;
+    height: 18rem;
+  }
+
+  .side-photo--left {
+    right: calc(100% + 2rem);
+  }
+
+  .side-photo--right {
+    left: calc(100% + 2rem);
+  }
+}
+
+@media (max-width: 650px) {
+  .side-photo {
+    width: 8.5rem;
+    height: 12rem;
+    border-width: 0.4rem;
+  }
+
+  .side-photo--left {
+    right: calc(100% + 1rem);
+  }
+
+  .side-photo--right {
+    left: calc(100% + 1rem);
+  }
+}
+
 .svg-container {
   position: absolute;
   z-index: 2;
